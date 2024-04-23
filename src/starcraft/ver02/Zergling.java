@@ -1,40 +1,54 @@
-package starcraft.ver01;
+package starcraft.ver02;
 
-public class Zealot {
+public class Zergling {
 
 	private String name;
 	private int power;
 	private int hp;
-
-	public Zealot(String name) {
+	
+	public Zergling(String name) {
 		this.name = name;
-		power = 5;
-		hp = 80;
+		power = 3;
+		hp = 60;
+	}
+	
+	// get set 메소드를 만드는 단축키
+	// art + shift + s -> generate get set -> select all -> generate.
 
+	public String getName() {
+		return name;
 	}
 
-	// getter
-	public String genName() {
-		return name;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getPower() {
 		return power;
 	}
 
+	public void setPower(int power) {
+		this.power = power;
+	}
+
 	public int getHp() {
 		return hp;
 	}
 
-	// 질럿이 저글링을 공격합니다.
-	public void attack(Zergling z) {
-		System.out.println(this.name + " 이 " + z.getName() + "을 공격합니다.");
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
+	// 저글링이 질럿을 공격합니다. attackZealot
+	public void attack(Zealot z) {
+		System.out.println(this.name + "이(가) " + z.genName() + "을 공격합니다.");
 		z.beAttacked(this.power);
 	}
 
-	// 질럿이 마린을 공격합니다.
+	// 저글링이 마린을 공격합니다. attackMarine
+
 	public void attack(Marine m) {
-		System.out.println(this.name + " 이 " + m.getName() + "을 공격합니다.");
+		System.out.println(this.name + "이(가) " + m.getName() + "을 공격합니다.");
 		m.beAttacked(this.power);
 	}
 

@@ -1,20 +1,17 @@
-package starcraft.ver01;
+package starcraft.ver02;
 
-public class Zergling {
+public class Marine {
 
 	private String name;
 	private int power;
 	private int hp;
 	
-	public Zergling(String name) {
+	public Marine(String name) {
 		this.name = name;
-		power = 3;
-		hp = 60;
+		power = 4;
+		hp = 70;
 	}
 	
-	// get set 메소드를 만드는 단축키
-	// art + shift + s -> generate get set -> select all -> generate.
-
 	public String getName() {
 		return name;
 	}
@@ -39,20 +36,20 @@ public class Zergling {
 		this.hp = hp;
 	}
 
-	// 저글링이 질럿을 공격합니다. attackZealot
+	// 마린이 질럿을 공격합니다. attackZealot
+
 	public void attack(Zealot z) {
 		System.out.println(this.name + "이(가) " + z.genName() + "을 공격합니다.");
 		z.beAttacked(this.power);
 	}
 
-	// 저글링이 마린을 공격합니다. attackMarine
+	// 마린이 저글링을 공격합니다. attackZergling
 
-	public void attack(Marine m) {
-		System.out.println(this.name + "이(가) " + m.getName() + "을 공격합니다.");
-		m.beAttacked(this.power);
+	public void attack(Zergling ze) {
+		System.out.println(this.name + "이(가) " + ze.getName() + "을 공격합니다.");
+		ze.beAttacked(this.power);
 	}
 
-	// 자신이 공격을 당합니다.
 	public void beAttacked(int power) {
 		// 방어적 코드 필요
 		if (hp <= 0) {

@@ -38,14 +38,14 @@ public class Marine {
 
 	// 마린이 질럿을 공격합니다. attackZealot
 
-	public void attackZealot(Zealot z) {
+	public void attack(Zealot z) {
 		System.out.println(this.name + "이(가) " + z.genName() + "을 공격합니다.");
 		z.beAttacked(this.power);
 	}
 
 	// 마린이 저글링을 공격합니다. attackZergling
 
-	public void attackZergling(Zergling ze) {
+	public void attack(Zergling ze) {
 		System.out.println(this.name + "이(가) " + ze.getName() + "을 공격합니다.");
 		ze.beAttacked(this.power);
 	}
