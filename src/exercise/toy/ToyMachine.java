@@ -25,6 +25,9 @@ public class ToyMachine {
 		}
 	}
 	
+	
+	
+	
 	public void draw(Product[] products) {
 		Random random = new Random();
 		int rdnum = random.nextInt(products.length);
